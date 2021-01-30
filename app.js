@@ -7,7 +7,7 @@ class App {
     this.ctx = this.canvas.getContext('2d');
 
     document.body.appendChild(this.canvas);
-
+ 
     window.addEventListener('resize', this.resize.bind(this), false);
     this.resize();
 
@@ -30,7 +30,7 @@ class App {
     window.requestAnimationFrame(this.animate.bind(this));
     this.ctx.clearRect(0, 0, this.stageWidth, this.stageHeight);
     this.block.draw(this.ctx);
-    this.ball.draw(this.ctx, this.stageWidth, this.stageHeight);
+    this.ball.draw(this.ctx, this.stageWidth, this.stageHeight, this.block);
   }
 }
 
